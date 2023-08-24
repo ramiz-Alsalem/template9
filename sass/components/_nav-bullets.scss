@@ -1,0 +1,50 @@
+.nav-bullets {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+  width: 40px;
+  z-index: 1000;
+  .bullets {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 3px solid var(--main-color);
+    margin: 20px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    .tooltip {
+      background-color: var(--main-color);
+      color: $color-white;
+      padding: 8px 10px;
+      position: absolute;
+      right: 32px;
+      top: 0;
+      width: 120px;
+      margin-top: -10px;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      cursor: default;
+      pointer-events: none;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        right: -14px;
+        border: 7px solid;
+        border-color: transparent transparent transparent var(--main-color);
+      }
+    }
+    &:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

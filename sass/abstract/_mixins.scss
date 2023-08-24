@@ -1,0 +1,47 @@
+@mixin center($position) {
+  position: $position;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+@mixin response($break-point) {
+  @if ($break-point == "smallest") {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @if ($break-point == "phone") {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if ($break-point == "small") {
+    @media (min-width: 768px){
+      @content;
+    }
+  }
+  @if ($break-point == "medium") {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @if ($break-point == "large") {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  //  max width
+
+  @if ($break-point == "small2") {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+  @if ($break-point == "medium2") {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>Spetial Design</title>
+  </head>
+  <body>
+    <!-- Start Settings Box -->
+    <div class="settings-box">
+      <div class="toggle-settings text-align-center">
+        <i class="fa-solid fa-gear settings-box__icon"></i>
+      </div>
+      <div class="settings-container">
+        <div class="option-box option-box--1 text-align-center">
+          <h4>Colors</h4>
+          <ul class="colors-list text-align-center">
+            <li class="active" data-color="#ff9800"></li>
+            <li data-color="#e91e63"></li>
+            <li data-color="#009688"></li>
+            <li data-color="#03a9f4"></li>
+            <li data-color="#4caf50"></li>
+          </ul>
+        </div>
+
+        <div class="option-box option-box--2 text-align-center">
+          <h4>Random backgrounds</h4>
+          <div class="random-backgrounds">
+            <button class="yes active" data-background="yes">
+              Yes
+            </button>
+            <button class="no" data-background="no">No</button>
+          </div>
+        </div>
+
+        <div class="option-box option-box--3 text-align-center">
+          <h4>Show Bullets</h4>
+          <div class="bullets-option">
+            <button class="yes active" data-display="show">
+              Yes
+            </button>
+            <button class="no" data-display="hide">No</button>
+          </div>
+        </div>
+
+        <div class="option-box option-box--4 text-align-center">
+          <h4>Show Header on scroll</h4>
+          <div class="header-option">
+            <button class="yes" data-header="show">
+              Yes
+            </button>
+            <button class="no" data-header="hide">No</button>
+          </div>
+        </div>
+
+        <button class="reset-options">Reset Option</button>
+      </div>
+    </div>
+    <!-- End Settings Box -->
+
+    <!-- Start nav bullets -->
+    <div class="nav-bullets transition">
+      <!-- <div class="bullets" data-section=".about-us">
+        <div class="tooltip transition">About Us</div>
+      </div>
+      <div class="bullets" data-section=".skills">
+        <div class="tooltip transition">Our Skills</div>
+      </div>
+      <div class="bullets" data-section=".gallery">
+        <div class="tooltip transition">Our Gallery</div>
+      </div>
+      <div class="bullets" data-section=".timeline">
+        <div class="tooltip transition">Timeline</div>
+      </div>
+      <div class="bullets" data-section=".features">
+        <div class="tooltip transition">Our Features</div>
+      </div>
+      <div class="bullets" data-section=".testimonials">
+        <div class="tooltip transition">Testimonials</div>
+      </div> -->
+    </div>
+    <!-- End nav bullets -->
+
+    <!-- Start Landing Section -->
+    <div class="landing-page">
+      <div class="overlay"></div>
+      <div class="container">
+        <header class="header-area">
+          <div class="logo">Spetial Design</div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#" class="transition active" data-section=".about-us"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#" class="transition" data-section=".skills">Skills</a>
+              </li>
+              <li>
+                <a href="#" class="transition" data-section=".gallery"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#" class="transition" data-section=".timeline"
+                  >Timeline</a
+                >
+              </li>
+              <li>
+                <a href="#" class="transition" data-section=".features"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="transition" data-section=".testimonials"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a href="#" class="transition" data-section=".contact-us"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <button class="toggle-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+      </div>
+      <div class="introduction-text text-align-center">
+        <h1>We are <span class="transition">creative</span> agency</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+          repudiandae odio veritatis id neque natus repellendus. odit magni
+          voluptas,
+        </p>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+
+    <!-- Start about us -->
+    <div class="container">
+      <section class="about-us">
+        <div class="about-us__info">
+          <h2 class="secondary-heading">About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            voluptatibus reiciendis eligendi neque qui error mollitia! Quo error
+            placeat nam perspiciatis, mollitia dignissimos? Placeat enim
+            perferendis molestiae eaque, non repudiandae?
+          </p>
+        </div>
+        <div class="about-us__img-con text-align-center">
+          <img
+            src="imgs/about-us.jpg"
+            alt="about us image"
+            class="about-us__img"
+          />
+        </div>
+      </section>
+    </div>
+    <!-- End about us -->
+
+    <!-- Start Our skills -->
+    <section class="skills">
+      <div class="container">
+        <h2
+          class="secondary-heading transition margin-bottom-medium text-align-center"
+        >
+          Our Skills
+        </h2>
+
+        <div class="skill-box">
+          <div class="skill-name">HTML</div>
+          <div class="skill-progress">
+            <span class="transition" data-progress="80%"></span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-name">CSS</div>
+          <div class="skill-progress">
+            <span class="transition" data-progress="70%"></span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-progress">
+            <span class="transition" data-progress="90%"></span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-name">Python</div>
+          <div class="skill-progress">
+            <span class="transition" data-progress="80%"></span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-name">PHP</div>
+          <div class="skill-progress">
+            <span class="transition" data-progress="90%"></span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-name">MySQL</div>
+          <div class="skill-progress">
+            <span class="transition" data-progress="50%"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End our skills -->
+
+    <!-- Start our gallery -->
+    <section class="gallery">
+      <div class="container">
+        <h2
+          class="secondary-heading transition margin-bottom-medium text-align-center"
+        >
+          Our Gallery
+        </h2>
+        <div class="images-box text-align-center">
+          <img src="imgs/01.jpg" alt="image one" />
+          <img src="imgs/02.jpg" alt="image Two" />
+          <img src="imgs/03.jpg" alt="image Three" />
+          <img src="imgs/04.jpg" alt="image Four" />
+          <img src="imgs/05.jpg" alt="image Five" />
+          <img src="imgs/06.png" alt="image Six" />
+          <img src="imgs/07.jpg" alt="image Seven" />
+          <img src="imgs/08.jpg" alt="image eight" />
+          <img src="imgs/09.jpg" alt="image nine" />
+          <img src="imgs/10.jpg" alt="image Ten" />
+        </div>
+      </div>
+    </section>
+    <!-- End our gallery -->
+
+    <!-- Start Timeline section -->
+    <section class="timeline">
+      <div class="container">
+        <div class="timeline-content">
+          <div class="year text-align-center transition">2018</div>
+
+          <div class="left">
+            <div class="content">
+              <h3 class="transition">Testing Heading</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laborum mollitia cumque recusandae aliquid repellendus pariatur
+                reiciendis dolorem. Veniam unde repellat nobis? Temporibus esse
+                ea praesentium dolores odit cupiditate facilis asperiores!
+              </p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="right">
+            <div class="content">
+              <h3 class="transition">Testing Heading</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laborum mollitia cumque recusandae aliquid repellendus pariatur
+                reiciendis dolorem. Veniam unde repellat nobis? Temporibus esse
+                ea praesentium dolores odit cupiditate facilis asperiores!
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="year text-align-center transition">2016</div>
+
+          <div class="left">
+            <div class="content">
+              <h3 class="transition">Testing Heading</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laborum mollitia cumque recusandae aliquid repellendus pariatur
+                reiciendis dolorem. Veniam unde repellat nobis? Temporibus esse
+                ea praesentium dolores odit cupiditate facilis asperiores!
+              </p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="left">
+            <div class="content">
+              <h3 class="transition">Testing Heading</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laborum mollitia cumque recusandae aliquid repellendus pariatur
+                reiciendis dolorem. Veniam unde repellat nobis? Temporibus esse
+                ea praesentium dolores odit cupiditate facilis asperiores!
+              </p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Timeline section -->
+
+    <!-- Start Features -->
+    <section class="features">
+      <h2
+        class="secondary-heading margin-bottom-medium-2 text-align-center transition"
+      >
+        Our Features
+      </h2>
+      <div class="container">
+        <div class="feat-box">
+          <img src="imgs/programming.svg" alt="" />
+          <h4>Development</h4>
+          <p>
+            Transforming ideas into stunning web experiences that captivate and
+            engage.
+          </p>
+        </div>
+
+        <div class="feat-box">
+          <img src="imgs/advertising.svg" alt="" />
+          <h4>Marketing</h4>
+          <p>
+            Boosting your online presence and visibility through strategic SEO
+            techniques.
+          </p>
+        </div>
+
+        <div class="feat-box">
+          <img src="imgs/hosting-icon.svg" alt="" />
+          <h4>Hosting</h4>
+          <p>
+            Turning innovative concepts into functional and user-friendly mobile
+            applications.
+          </p>
+        </div>
+
+        <div class="feat-box">
+          <img src="imgs/mobile-app.svg" alt="" />
+          <h4>Moblie Applications</h4>
+          <p>
+            Creating visual masterpieces that convey your message with
+            creativity and precision.
+          </p>
+        </div>
+
+        <div class="feat-box">
+          <img src="imgs/graphic-design.svg" alt="" />
+          <h4>Cloud and servers</h4>
+          <p>
+            Unlocking the power of digital platforms to elevate your brand and
+            drive growth.
+          </p>
+        </div>
+
+        <div class="feat-box">
+          <img src="imgs/web-design.svg" alt="" />
+          <h4>SEO</h4>
+          <p>
+            We are artistic storytellers, crafting captivating content that
+            resonates and engages your audience.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Features -->
+
+    <!-- Start Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2
+          class="secondary-heading secondary-heading--white margin-bottom-medium-2 transition"
+        >
+          Testimonials
+        </h2>
+        <div class="testimonials-content">
+          <div class="ts-box">
+            <p>
+              Their expertise in web development is truly exceptional. They
+              brought our website vision to life with seamless functionality and
+              an elegant user interface. I'm thoroughly impressed by their
+              coding skills and attention to user experience.
+            </p>
+            <div class="person-info">
+              <img
+                src="https://via.placeholder.com/80x80/ddd"
+                alt="Ahmed Ali"
+              />
+              <div class="text">
+                <h4>Ahmed Ali</h4>
+                <p>CEO at Tech Innovators.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ts-box">
+            <p>
+              Their expertise in web development is truly exceptional. They
+              brought our website vision to life with seamless functionality and
+              an elegant user interface. I'm thoroughly impressed by their
+              coding skills and attention to user experience.
+            </p>
+            <div class="person-info">
+              <img
+                src="https://via.placeholder.com/80x80/eee"
+                alt="David Williams"
+              />
+              <div class="text">
+                <h4>David Williams</h4>
+                <p>CEO at Tech Innovators.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ts-box">
+            <p>
+              We owe the success of our online platform to this team. Their
+              backend programming wizardry made complex features appear simple.
+              It's not just about code with them; it's about creating a digital
+              experience that stands out.
+            </p>
+            <div class="person-info">
+              <img
+                src="https://via.placeholder.com/80x80/aaa"
+                alt="Emily Johnson"
+              />
+              <div class="text">
+                <h4>Emily Johnson</h4>
+                <p>Tech Lead at CodeCrafters Co.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials -->
+    <section class="contact-us">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2
+          class="secondary-heading margin-bottom-medium-2 transition text-align-center"
+        >
+          Contact Us
+        </h2>
+        <form action="" autocomplete="off" class="contact-form">
+          <div class="left">
+            <input
+              type="text"
+              placeholder="Your name"
+              name="username"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Your phone"
+              name="phone"
+              required
+              pattern="\d+"
+            />
+            <input
+              type="email"
+              placeholder="Your email"
+              name="email"
+              required
+            />
+            <input type="text" placeholder="Subject" name="sunbject" />
+          </div>
+          <div class="right">
+            <textarea name="message" placeholder="Your message"></textarea>
+            <input type="submit" value="contact" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Start Contact us -->
+    <!-- End Contact us -->
+    <!-- Start Footer -->
+    <footer class="footer">&copy; 2023 all rights reserved</footer>
+    <!-- End Footer -->
+    <script src="js/master.js"></script>
+  </body>
+</html>

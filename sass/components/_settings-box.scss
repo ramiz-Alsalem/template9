@@ -1,0 +1,113 @@
+.settings-box {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  z-index: 1000;
+  background-color: $color-white;
+  width: 250px;
+  min-height: 100vh;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  border: 1px solid $color-gray-2;
+  &.open {
+    left: 0;
+  }
+  &.box-shadow {
+    box-shadow: 5px 0 10px rgba($color-black, 0.15);
+  }
+  .toggle-settings {
+    background-color: $color-white;
+    position: absolute;
+    right: -40px;
+    top: 100px;
+    width: 40px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  &__icon {
+    padding: 8px;
+  }
+
+  .settings-container {
+    .option-box {
+      padding: 10px;
+      background-color: $color-gray-2;
+      margin: 10px;
+
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      &--1 {
+        h4 {
+          color: $color-gray-1;
+        }
+
+        .colors-list {
+          list-style: none;
+          margin: 0;
+          li {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.5;
+            display: inline-block;
+            &.active {
+              opacity: 1;
+              border: 2px solid $color-white;
+            }
+          }
+        }
+      }
+      .yes,
+      .no {
+        border: none;
+        outline: none;
+        width: 50px;
+        background-color: $color-gray-3;
+        color: $color-white;
+        display: inline-block;
+        font-size: 14px;
+        padding: 3px 10px;
+        font-weight: 700;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        opacity: 0.5;
+        cursor: pointer;
+        background-color: var(--main-color);
+      }
+      button.active {
+        opacity: 1;
+      }
+    }
+  }
+  .reset-options {
+    border: none;
+    outline: none;
+    background-color: #f44336;
+    color: $color-white;
+    width: 228px;
+    margin: 10px;
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+}
+}

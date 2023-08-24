@@ -1,0 +1,397 @@
+/* Start Landing section */
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../imgs/01.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: center top;
+  .introduction-text {
+    @include center(absolute);
+    z-index: 2;
+    color: $color-white;
+    h1 {
+      font-size: 34px;
+      margin: 0 0 12px;
+      span {
+        color: var(--main-color);
+      }
+      @include response("smallest") {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 20px;
+      margin: 0;
+      @include response("smallest") {
+        font-size: 14px;
+      }
+    }
+    @include response("small2") {
+      width: 90%;
+    }
+  }
+}
+/* End Landing Section */
+
+/* Start About As */
+.about-us {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  display: flex;
+  @include response("phone") {
+    flex-direction: column;
+    text-align: center;
+  }
+  &__info {
+    flex: 1;
+    padding: 30px;
+    @include response("phone") {
+      padding: 0 10px;
+    }
+    p {
+      line-height: 1.8;
+      color: #767676;
+      @include response("phone") {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__img-con {
+    flex: 1;
+  }
+
+  &__img {
+    width: 250px;
+  }
+}
+/* End About As */
+
+/* Start Skills */
+.skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: $color-gray-2;
+}
+/* End Skills */
+/* Start Gallery */
+.gallery {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+
+  .images-box {
+    img {
+      width: 200px;
+      padding: 3px;
+      background-color: $color-gray-4;
+      border: 1px solid $color-gray-5;
+      margin: 5px;
+      cursor: pointer;
+    }
+  }
+}
+/* End Gallery */
+/* Start timeline */
+.timeline {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: $color-gray-2;
+
+  .timeline-content {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: var(--main-color);
+      position: absolute;
+      left: 50%;
+      margin-left: -1px;
+      top: 0;
+      transition: var(--main-transition);
+      -webkit-transition: var(--main-transition);
+      -moz-transition: var(--main-transition);
+      -ms-transition: var(--main-transition);
+      -o-transition: var(--main-transition);
+    }
+    .year {
+      margin: 20px auto;
+      width: 50px;
+      background-color: var(--main-color);
+      position: relative;
+      z-index: 2;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      color: white;
+      padding: 2px 5px;
+      font-weight: 700;
+    }
+    .left,
+    .right {
+      @include response("phone") {
+        margin-top: 30px;
+      }
+      width: calc(50% - 25px);
+      margin-bottom: 40px;
+      position: relative;
+      @include response("phone") {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .content {
+        padding: 20px;
+        background-color: $color-white;
+
+        &:before {
+          content: "";
+          border: 10px solid;
+          position: absolute;
+          top: 20px;
+          @include response("phone") {
+            top: -20px;
+          }
+        }
+        h3 {
+          font-weight: 700;
+          color: var(--main-color);
+          margin: 0 0 10px;
+        }
+
+        p {
+          color: $color-gray-1;
+          line-height: 1.6;
+          margin: 0;
+          @include response("smallest") {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .left {
+      float: left;
+      &::before {
+        @extend %before-left-right-styling;
+        right: -33.5px;
+        @include response("phone") {
+          left: 50%;
+          translate: -50%;
+        }
+      }
+      .content::before {
+        left: calc(100%);
+        border-color: transparent transparent transparent $color-white;
+        @include response("phone") {
+          left: 50%;
+          translate: -50%;
+          border-color: transparent transparent $color-white transparent;
+        }
+      }
+    }
+
+    .right {
+      float: right;
+      &::before {
+        @extend %before-left-right-styling;
+        left: -33.5px;
+        @include response("phone") {
+          left: 50%;
+          translate: -50%;
+        }
+      }
+      .content::before {
+        left: -20px;
+        border-color: transparent $color-white transparent transparent;
+        @include response("phone") {
+          left: 50%;
+          translate: -50%;
+          border-color: transparent transparent $color-white transparent;
+        }
+      }
+    }
+  }
+}
+%before-left-right-styling {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: $color-white;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  top: 20px;
+  @include response("phone") {
+    top: -40px;
+  }
+}
+/* End timeline */
+/* Start Features */
+.features {
+  padding-top: calc(var(--section-padding) + 30px);
+  padding-bottom: calc(var(--section-padding) + 30px);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    @include response("smallest") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feat-box {
+    text-align: center;
+    max-width: 100%;
+    // @include response("phone") {}
+    img {
+      width: 160px;
+    }
+
+    h4 {
+      font-size: 22px;
+      margin: 15px 0 40px;
+      position: relative;
+      @include response("phone") {
+        font-size: 20px;
+      }
+      &::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: var(--main-color);
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        bottom: -22px;
+        transition: var(--main-transition);
+        -webkit-transition: var(--main-transition);
+        -moz-transition: var(--main-transition);
+        -ms-transition: var(--main-transition);
+        -o-transition: var(--main-transition);
+      }
+    }
+
+    p {
+      width: 80%;
+      margin: auto;
+      line-height: 1.6;
+      color: $color-gray-6;
+      @include response("phone") {
+        font-size: 15px;
+      }
+    }
+  }
+}
+/* End Features*/
+/* Start testimonials */
+.testimonials {
+  padding: calc(var(--section-padding) + 30px) 0;
+  position: relative;
+  &::before {
+    content: "";
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    height: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  &::after {
+    content: "";
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $color-gray-3;
+    height: 100%;
+  }
+  h2 {
+    position: relative;
+    z-index: 2;
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    @include response("smallest") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .ts-box {
+    position: relative;
+    z-index: 2;
+    background-color: $color-white;
+    padding: 20px;
+    & > p {
+      margin: 0 0 15px;
+      line-height: 1.5;
+      font-size: 14px;
+      color: $color-gray-6;
+      font-style: italic;
+    }
+    .person-info {
+      display: flex;
+      align-items: center;
+      @include response("phone") {
+        flex-direction: column;
+      }
+      img {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: 20px;
+        @include response("phone") {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .text {
+        @include response("phone") {
+          text-align: center;
+        }
+        h4 {
+          margin: 0 0 10px;
+        }
+        p {
+          font-size: 14px;
+          color: $color-gray-6;
+        }
+      }
+    }
+  }
+}
+/* End testimonials */
+/* Start contact us*/
+.contact-us {
+  min-height: 600px;
+  background-image: url("../imgs/contact.png");
+  background-size: cover;
+  padding: calc(var(--section-padding) + 30px) 0;
+  position: relative;
+  .overlay {
+    background-color: rgba($color-white, 0.6);
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+/* End contact us*/

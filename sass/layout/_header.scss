@@ -1,0 +1,25 @@
+.container:has(header) {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  width: 100%;
+  z-index: 900;
+  &.show-header {
+    position: fixed;
+    background-color: $color-gray-3;
+  }
+}
+.header-area {
+  padding: 10px;
+  position: relative;
+  z-index: 1001;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    width: 300px;
+    padding: 15px;
+    font-weight: 700;
+  }
+}
